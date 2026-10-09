@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,74 +8,129 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/header-footer.css">
 </head>
+
 <body>
 
 
-    <!-- MEMBER 4: HEADER goes here -->
+  <!-- MEMBER 4: HEADER goes here -->
 
+  <!-- MEMBER 1: ABOUT THE PROJECT -->
   <main>
-    <section class="section hero" id="home">
-      <p class="eyebrow">Full-Stack Lab 03</p>
-      <h1>We make <span data-typing>useful websites</span>.</h1>
-      <p>We are a small team combining design and technology to make helpful digital products.</p>
-      <a class="button" href="#contact">Get in touch</a>
-    </section>
+    <!-- MEMBER 1: HERO SECTION -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>
+          We build things,
+          <span class="typing-text" id="typingText">with code</span>
+        </h1>
 
-    <section class="section" id="about">
-      <p class="eyebrow">About us</p>
-      <h2>Good ideas, built together.</h2>
-      <p>We work with people and teams to turn ideas into clear, useful online experiences. We plan, design, and build each project with care.</p>
-      <div class="card-grid">
-        <article class="card">
-          <h3>Plan</h3>
-          <p>We learn what you need and decide how to get there.</p>
-        </article>
-        <article class="card">
-          <h3>Design</h3>
-          <p>We make simple, welcoming designs that are easy to use.</p>
-        </article>
-        <article class="card">
-          <h3>Build</h3>
-          <p>We create fast, accessible websites that work on every screen.</p>
-        </article>
+        <p>
+          A four-member team learning Full-Stack Software Development
+          with Git &amp; GitHub collaboration.
+        </p>
+
+        <a href="#team" class="btn">Meet the Team</a>
       </div>
     </section>
 
-    <section class="section" id="team">
-      <p class="eyebrow">Our team</p>
-      <h2>Meet the team.</h2>
-      <div class="card-grid">
-        <article class="card"><h3>Naveen</h3><p>HTML Developer</p></article>
-        <article class="card"><h3>Buddhini</h3><p>CSS Developer </p></article>
-        <article class="card"><h3>Nethmi</h3><p>JavaScript Developer</p></article>
-        <article class="card"><h3>Rasika</h3><p>Header & Footer Developer </p></article>
+
+    <section class="about section-padding" id="about">
+      <div class="container">
+        <h2 class="section-title">About the Project</h2>
+
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3>HTML</h3>
+            <p>Semantic structure for the whole page.</p>
+          </div>
+
+          <div class="skill-card">
+            <h3>CSS</h3>
+            <p>Responsive layout, colours and dark mode.</p>
+          </div>
+
+          <div class="skill-card">
+            <h3>JavaScript</h3>
+            <p>Interactivity: menu, theme, form checks.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="contact">
-      <p class="eyebrow">Contact</p>
-      <h2>Tell us about your idea.</h2>
-      <p>send a message below.</p>
-      <form id="contact-form">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" required>
 
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" required>
+    <section class="team section-padding" id="team">
+      <div class="container">
+        <h2 class="section-title">Our Team</h2>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" ></textarea>
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="member-avatar">M1</div>
+            <h3>Member 1</h3>
+            <p>HTML Developer</p>
+          </div>
 
-        <button class="button" type="submit">Check message</button>
-        <p id="form-status"></p>
-      </form>
+          <div class="team-card">
+            <div class="member-avatar">M2</div>
+            <h3>Member 2</h3>
+            <p>CSS Developer</p>
+          </div>
+
+          <div class="team-card">
+            <div class="member-avatar">M3</div>
+            <h3>Member 3</h3>
+            <p>JavaScript Developer</p>
+          </div>
+
+          <div class="team-card">
+            <div class="member-avatar">M4</div>
+            <h3>Member 4</h3>
+            <p>Header &amp; Footer Developer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="contact section-padding" id="contact">
+      <div class="contact-container">
+        <h2 class="section-title">Contact Us</h2>
+
+        <form id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required minlength="2">
+            <small class="error-message" id="nameError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            <small class="error-message" id="emailError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message" required
+              minlength="5"></textarea>
+            <small class="error-message" id="messageError"></small>
+          </div>
+
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+
+          <button type="submit" class="btn submit-btn">
+            Send Message
+          </button>
+        </form>
+      </div>
     </section>
   </main>
 
-    <!-- MEMBER 4: HEADER goes here -->
+
+  <!-- MEMBER 4: HEADER goes here -->
 
 
 
   <script src="js/script.js"></script>
 </body>
+
 </html>
