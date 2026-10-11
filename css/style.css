@@ -1,1 +1,393 @@
+
+:root {
+    --primary: #51258e;
+    --primary-dark: #3f1b70;
+    --primary-light: #f3eefb;
+    --text: #222438;
+    --muted: #777789;
+    --border: #e9e7ee;
+    --white: #ffffff;
+    --success: #15965c;
+    --error: #d93045;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--white);
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.section-padding {
+    padding: 48px 0;
+}
+
+.section-title {
+    color: var(--primary);
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 26px;
+}
+
+
+
+
+.hero {
+    min-height: 330px;
+    background: linear-gradient(
+        120deg,
+        #f0e9fb 0%,
+        #f8f5fc 55%,
+        #ffffff 100%
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: clamp(27px, 4vw, 38px);
+    line-height: 1.3;
+    margin-bottom: 14px;
+    font-weight: 750;
+    letter-spacing: -0.8px;
+}
+
+.typing-text {
+    color: var(--primary);
+    display: inline-block;
+    border-right: 2px solid var(--primary);
+    padding-right: 3px;
+    animation: cursor-blink 0.8s step-end infinite;
+}
+
+@keyframes cursor-blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.hero p {
+    max-width: 470px;
+    margin: 0 auto 22px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 7px;
+    padding: 11px 22px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.btn:focus-visible,
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #bba0e5;
+    outline-offset: 3px;
+}
+
+
+
+  /* ABOUT & SKILLS SECTION */
+
+
+.about {
+    background: var(--white);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px 16px;
+    text-align: center;
+    background: var(--white);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 20px rgba(55, 35, 85, 0.08);
+}
+
+.skill-card h3 {
+    color: var(--primary);
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.skill-card p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+
+/*TEAM SECTION */
+
+.team {
+    background: var(--primary-light);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.team-card {
+    padding: 20px 12px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--white);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 20px rgba(55, 35, 85, 0.08);
+}
+
+.member-avatar {
+    width: 62px;
+    height: 62px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.team-card h3 {
+    color: var(--primary);
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.team-card p {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+
+/*CONTACT SECTION*/
+
+.contact {
+    background: var(--white);
+}
+
+.contact-container {
+    width: 90%;
+    max-width: 570px;
+    margin: 0 auto;
+}
+
+.contact form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+    display: block;
+    width: 100%;
+    padding: 11px 13px;
+    border: 1px solid #dedde5;
+    border-radius: 6px;
+    background: var(--white);
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input {
+    height: 40px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9998a6;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(81, 37, 142, 0.1);
+}
+
+.form-group input.invalid,
+.form-group textarea.invalid {
+    border-color: var(--error);
+}
+
+.error-message {
+    display: block;
+    color: var(--error);
+    font-size: 11px;
+    margin-top: 4px;
+    min-height: 0;
+}
+
+.form-status {
+    min-height: 22px;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 3px 0 10px;
+}
+
+.form-status.success {
+    color: var(--success);
+}
+
+.form-status.error {
+    color: var(--error);
+}
+
+.submit-btn {
+    min-width: 125px;
+}
+
+
+
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 38px 0;
+    }
+
+    .hero {
+        min-height: 290px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        max-width: 440px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 500px;
+    }
+
+    .skill-card {
+        padding: 20px 14px;
+    }
+
+    .contact-container {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .hero p {
+        font-size: 12px;
+    }
+
+    .section-title {
+        font-size: 21px;
+    }
+
+    .team-grid {
+        gap: 12px;
+    }
+
+    .team-card {
+        padding: 18px 8px;
+    }
+
+    .member-avatar {
+        width: 52px;
+        height: 52px;
+    }
+
+    .contact-container {
+        width: 92%;
+    }
+}
 /* MEMBER 2: global styles, layout, colours, dark mode */
