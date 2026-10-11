@@ -1,8 +1,3 @@
-/* MEMBER 2: global styles, layout, colours, dark mode */
-
-/* ==============================
-   GLOBAL STYLES
-================================= */
 
 :root {
     --primary: #51258e;
@@ -395,3 +390,4 @@ button:focus-visible {
         width: 92%;
     }
 }
+/* MEMBER 2: global styles, layout, colours, dark mode */
